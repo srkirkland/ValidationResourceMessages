@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using NHibernate.Validator.Event;
+using NHibernate.Validator.Cfg.Loquacious;
+using System.Reflection;
+using ValidationResourceMessages.Models;
 
 namespace ValidationResourceMessages
 {
@@ -31,7 +34,10 @@ namespace ValidationResourceMessages
 
             RegisterRoutes(RouteTable.Routes);
 
-            NHibernate.Validator.Cfg.Environment.SharedEngineProvider = new NHibernateSharedEngineProvider();
+            var engineProvider = new NHibernateSharedEngineProvider();
+            engineProvider.GetEngine().Configure();
+
+            NHibernate.Validator.Cfg.Environment.SharedEngineProvider = engineProvider;
         }
     }
 }
