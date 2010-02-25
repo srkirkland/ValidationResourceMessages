@@ -4,10 +4,7 @@
 
     <h2>Index</h2>
 
-    <fieldset>
-        <legend>Customer</legend>
-        <p>
-        </p>
-    </fieldset>
+    <%= Html.ActionLink("Go to Edit Page", "Edit") %>
+    
 
 </asp:Content>

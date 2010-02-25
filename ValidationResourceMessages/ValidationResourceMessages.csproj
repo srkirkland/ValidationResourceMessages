@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Views\Customer\Edit.aspx" />
     <Content Include="Views\Customer\Index.aspx" />
     <Content Include="Views\Shared\Site.Master" />
   </ItemGroup>
